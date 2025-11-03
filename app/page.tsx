@@ -6,8 +6,8 @@ import { Copy, Sparkles, RefreshCw, History, Check, Brain, Zap, LogOut, User, Ma
 import { createClient } from '@supabase/supabase-js';
 
 // Configuration Supabase - REMPLACER PAR VOS VRAIES VALEURS
-const supabaseUrl = 'https://ztxgyuyuyyljllslvvws.supabase.co'; // Remplacer par votre URL
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp0eGd5dXl1eXlsamxsc2x2dndzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjIxODkwMzgsImV4cCI6MjA3Nzc2NTAzOH0.XeleQo9RXKUgWLVqjv25NUQo3JfIAMnCRal4ftWtyxU'; // Remplacer par votre clé
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''; // Remplacer par votre URL Supabase
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''; // Remplacer par votre clé Anon
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 interface PromptHistory {
